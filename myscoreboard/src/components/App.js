@@ -1,12 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
+import Header from "./Header";
+import Player from "./Player";
 
-function App() {
-  return (
-    <div>
-      <h1>Hello from React</h1>
-      <p>I was rendered from a component</p>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="scoreboard">
+        <Header />
+        <div className="players">
+          {this.props.players.map(player => (
+            <Player key={player.id} name={player.name} score={player.score} />
+          ))}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
