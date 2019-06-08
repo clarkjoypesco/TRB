@@ -7,7 +7,7 @@ class Player extends Component {
       <div className="player">
         <div className="player-name">{this.props.name}</div>
         <div className="player-score">
-          <Counter score={this.props.score} />
+          <Counter initialScore={this.props.initialScore} />
         </div>
       </div>
     );

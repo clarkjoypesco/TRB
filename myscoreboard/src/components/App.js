@@ -9,7 +9,11 @@ class App extends Component {
         <Header />
         <div className="players">
           {this.props.players.map(player => (
-            <Player key={player.id} name={player.name} score={player.score} />
+            <Player
+              key={player.id}
+              name={player.name}
+              initialScore={player.score}
+            />
           ))}
         </div>
       </div>
